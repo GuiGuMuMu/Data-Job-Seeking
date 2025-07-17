@@ -101,7 +101,8 @@
         .round-title {
             display: flex;
             align-items: center;
-            font-medium text-lg;
+            font-weight: 500; /* Medium font weight */
+            font-size: 1.125rem; /* text-lg */
             color: #2d3748; /* Darker text for round titles */
         }
         .round-title svg {
@@ -113,6 +114,10 @@
 <body class="antialiased">
     <div class="container">
         <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Data Job Interview Flowchart Summary</h1>
+        <p class="text-center text-gray-600 mb-8">
+            This flowchart summarizes typical interview rounds and required skills for various data roles across top tech companies.
+            Please note that the exact number and order of rounds, as well as specific content, can vary significantly by team, level, and individual interviewer.
+        </p>
 
         <!-- Amazon Section -->
         <div class="company-section">
@@ -121,9 +126,9 @@
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="amazon-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="amazon-content">
-                <!-- Data Scientist (DS) / Applied Scientist (AS) -->
+                <!-- Data Scientist (DS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) Interview Flow</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) Interview Flow</h3>
                     <div class="flow-step">
                         <span class="flow-step-number">1</span>
                         <div class="step-text">
@@ -307,60 +312,6 @@
                     </div>
                     <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL and Python coding are core; system design ability is highly important.</p>
                 </div>
-
-                <!-- Data Analyst (DA) / Business Analyst (BA) -->
-                <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) / Business Analyst (BA) Interview Flow</h3>
-                    <div class="flow-step">
-                        <span class="flow-step-number">1</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
-                                Round 1: SQL
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Simple aggregation, filtering, Join, Window Functions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-step-number">2</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                                Round 2: Python
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Data manipulation and processing.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-step-number">3</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
-                                Round 3: Metrics
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: How to define and use metrics to change existing processes.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-step-number">4</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                                Round 4: Behavioral Questions (BQ)
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Behavioral questions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL difficulty is relatively low but requires proficiency; more emphasis on business understanding and communication skills.</p>
-                </div>
             </div>
         </div>
 
@@ -371,9 +322,9 @@
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="apple-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="apple-content">
-                <!-- Data Scientist (DS) / ML Data Scientist (MLDS) -->
+                <!-- Data Scientist (DS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / ML Data Scientist (MLDS) Interview Flow</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) Interview Flow</h3>
                     <div class="flow-step">
                         <span class="flow-step-number">1</span>
                         <div class="step-text">
@@ -490,36 +441,6 @@
                     </div>
                     <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** More focused on data analysis and business understanding.</p>
                 </div>
-
-                <!-- Software/Data Engineer (DE) -->
-                <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Software/Data Engineer (DE) Interview Flow</h3>
-                    <div class="flow-step">
-                        <span class="flow-step-number">1</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                                Round 1: Coding
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Python coding (more focused on practical data engineering problems).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-step-number">2</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
-                                Round 2: Competency and Technical Discussion
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Discussion about teams, roles, and projects.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** May not directly test LeetCode algorithms, more focused on practical engineering capabilities.</p>
-                </div>
             </div>
         </div>
 
@@ -530,9 +451,9 @@
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="google-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="google-content">
-                <!-- Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) -->
+                <!-- Data Scientist (DS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) Interview Flow</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) Interview Flow</h3>
                     <div class="flow-step">
                         <span class="flow-step-number">1</span>
                         <div class="step-text">
@@ -608,9 +529,9 @@
                     <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Comprehensive interview content covering SQL, Python, ML/Stats, Case Study, and BQ; Case Study leans towards product, requiring deep understanding of business logic; high requirements for statistical fundamentals, sometimes requiring manual derivation of formulas.</p>
                 </div>
 
-                <!-- Business Data Scientist (BDS) -->
+                <!-- Product Data Scientist (PDS) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Data Scientist (BDS) Interview Flow</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Product Data Scientist (PDS) Interview Flow</h3>
                     <div class="flow-step">
                         <span class="flow-step-number">1</span>
                         <div class="step-text">
@@ -619,7 +540,7 @@
                                 Round 1: SQL
                             </p>
                             <div class="knowledge-points">
-                                <p>Skills: Basic SQL queries.</p>
+                                <p>Skills: Aggregation, Join, Window Functions, MoM (Month-over-Month) Change, AB Test result analysis.</p>
                             </div>
                         </div>
                     </div>
@@ -628,10 +549,10 @@
                         <div class="step-text">
                             <p class="round-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                                Round 2: Python
+                                Round 2: Python/R Programming
                             </p>
                             <div class="knowledge-points">
-                                <p>Skills: Basic Python programming.</p>
+                                <p>Skills: Data manipulation (Pandas/dplyr), algorithm questions (Anagram, Duplicate Removal), simulation studies.</p>
                             </div>
                         </div>
                     </div>
@@ -640,10 +561,10 @@
                         <div class="step-text">
                             <p class="round-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
-                                Round 3: Stats + ML
+                                Round 3: ML/Stats (Machine Learning/Statistics)
                             </p>
                             <div class="knowledge-points">
-                                <p>Skills: Statistics and machine learning fundamentals.</p>
+                                <p>Skills: Basic concepts (Bias-Variance Tradeoff, P-value, Confidence Intervals, Hypothesis Testing (Chi-square test)), Models (Linear Regression, Logistic Regression, Classifier Evaluation Metrics (Precision/Recall Curve), RMSE), Causal Inference.</p>
                             </div>
                         </div>
                     </div>
@@ -652,28 +573,94 @@
                         <div class="step-text">
                             <p class="round-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-                                Round 4: Marketing/Ads
+                                Round 4: Case Study (Analysis)
                             </p>
                             <div class="knowledge-points">
-                                <p>Skills: May involve marketing and advertising-related questions.</p>
+                                <p>Skills: Product problem analysis (Google Meet/YouTube user decline), AB Testing design (Google Map new features), user growth strategies, auto-reply feature improvement.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** May focus more on business and marketing data analysis.</p>
+                    <div class="flow-step">
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 5: Data Intuition / Applied Analysis
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data analysis and intuition, such as evaluating large-scale long-tail search data, identifying similar customers.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-step-number">6</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 6: Googleyness and Leadership (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Decision-making errors, teamwork, time management, handling disagreements.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Comprehensive interview content covering SQL, Python, ML/Stats, Case Study, and BQ; Case Study leans towards product, requiring deep understanding of business logic; high requirements for statistical fundamentals, sometimes requiring manual derivation of formulas.</p>
+                </div>
+
+                <!-- Data Scientist Research (DSR) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist Research (DSR) Interview Flow</h3>
+                    <div class="flow-step">
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 1: Algorithms & Data Structures
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Advanced algorithms, data structures, and theoretical computer science concepts.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 2: Machine Learning Research
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Deep learning, reinforcement learning, NLP, computer vision, research methodologies, paper discussions.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 3: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Collaboration, problem-solving, project leadership, handling ambiguity.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Highly theoretical and research-focused; emphasizes deep understanding of ML algorithms and ability to conduct independent research.</p>
                 </div>
             </div>
         </div>
 
-        <!-- Meta (Facebook) Section -->
+        <!-- Meta Section -->
         <div class="company-section">
             <div class="accordion-header" onclick="toggleAccordion('meta-content')">
-                <h2 class="text-2xl font-bold text-gray-700">Meta (Facebook)</h2>
+                <h2 class="text-2xl font-bold text-gray-700">Meta</h2>
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="meta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="meta-content">
-                <!-- Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) -->
+                <!-- Data Scientist (DS) / Data Science Analyst (DSA) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) Interview Flow</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Data Science Analyst (DSA) Interview Flow</h3>
                     <div class="flow-step">
                         <span class="flow-step-number">1</span>
                         <div class="step-text">
@@ -690,11 +677,11 @@
                         <span class="flow-step-number">2</span>
                         <div class="step-text">
                             <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
-                                Round 2: Python
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 2: Analytical Reasoning (AR)
                             </p>
                             <div class="knowledge-points">
-                                <p>Skills: Smallest positive number from odd digits, finding most frequent comments in a dictionary, maximum class size for two consecutive years, book stacking problem.</p>
+                                <p>Skills: Ad recommendation model evaluation, A/B Testing (CTR improvement, metric trade-offs, chart issues), fake account identification (Bayesian calculation).</p>
                             </div>
                         </div>
                     </div>
@@ -703,19 +690,7 @@
                         <div class="step-text">
                             <p class="round-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
-                                Round 3: Analytical Reasoning (AR)
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Ad recommendation model evaluation, A/B Testing (CTR improvement, metric trade-offs, chart issues), fake account identification (Bayesian calculation).</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-step-number">4</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
-                                Round 4: Analytical Execution (AE)
+                                Round 3: Analytical Execution (AE)
                             </p>
                             <div class="knowledge-points">
                                 <p>Skills: Bad account identification, Bayesian probability calculation, LLM model evaluation metrics.</p>
@@ -723,11 +698,11 @@
                         </div>
                     </div>
                     <div class="flow-step">
-                        <span class="flow-step-number">5</span>
+                        <span class="flow-step-number">4</span>
                         <div class="step-text">
                             <p class="round-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
-                                Round 5: Product Sense (PS)
+                                Round 4: Product Sense (PS)
                             </p>
                             <div class="knowledge-points">
                                 <p>Skills: How to measure severity of harmful content on platform, Group Call feature requirement analysis, new feature launch evaluation, metric selection and trade-offs (e.g., Time Spent vs. Retention Rate).</p>
@@ -735,11 +710,11 @@
                         </div>
                     </div>
                     <div class="flow-step">
-                        <span class="flow-step-number">6</span>
+                        <span class="flow-step-number">5</span>
                         <div class="step-text">
                             <p class="round-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                                Round 6: Behavioral Questions (BQ)
+                                Round 5: Behavioral Questions (BQ)
                             </p>
                             <div class="knowledge-points">
                                 <p>Skills: Project redirection, constructive feedback, convincing others, handling difficult colleagues, AR (Are Right, A Lot).</p>
@@ -805,16 +780,16 @@
             </div>
         </div>
 
-        <!-- Microsoft (微软) Section -->
+        <!-- Microsoft Section -->
         <div class="company-section">
             <div class="accordion-header" onclick="toggleAccordion('microsoft-content')">
                 <h2 class="text-2xl font-bold text-gray-700">Microsoft</h2>
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="microsoft-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="microsoft-content">
-                <!-- Data Scientist (DS) / Applied Scientist (AS) -->
+                <!-- Data Scientist (DS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) Interview Flow</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) Interview Flow</h3>
                     <div class="flow-step">
                         <span class="flow-step-number">1</span>
                         <div class="step-text">
@@ -930,36 +905,6 @@
                         </div>
                     </div>
                     <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL and Python coding are primary components; data design ability is key.</p>
-                </div>
-
-                <!-- Business Intelligence Analyst (BIA) / Data Analyst (DA) -->
-                <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Analyst (BIA) / Data Analyst (DA) Interview Flow</h3>
-                    <div class="flow-step">
-                        <span class="flow-step-number">1</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
-                                Round 1: SQL
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Basic SQL questions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flow-step">
-                        <span class="flow-step-number">2</span>
-                        <div class="step-text">
-                            <p class="round-title">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
-                                Round 2: Behavioral Questions (BQ)
-                            </p>
-                            <div class="knowledge-points">
-                                <p>Skills: Behavioral questions.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Primarily assesses basic SQL and behavioral questions.</p>
                 </div>
             </div>
         </div>
