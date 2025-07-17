@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>数据岗位面试流程图总结</title>
+    <title>Data Job Interview Flowchart Summary</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -43,6 +43,7 @@
             font-weight: 600;
             font-size: 1.25rem; /* text-xl */
             padding: 0.75rem 0;
+            color: #1a202c; /* Darker text for header */
         }
         .accordion-content {
             max-height: 0;
@@ -50,17 +51,19 @@
             transition: max-height 0.3s ease-out;
         }
         .accordion-content.active {
-            max-height: 2000px; /* Increased for more content */
+            max-height: 2500px; /* Increased for more content */
             transition: max-height 0.5s ease-in;
         }
         .flow-step {
-            background-color: #e0f2f7; /* Light blue background for steps */
+            background-color: #e0f7fa; /* Lighter blue background for steps */
             border-left: 4px solid #007bff; /* Blue left border */
             border-radius: 0.5rem;
             padding: 1rem;
             margin-bottom: 1rem;
             position: relative;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            display: flex;
+            align-items: flex-start;
         }
         .flow-step:not(:last-child)::after {
             content: '';
@@ -83,255 +86,280 @@
             font-weight: bold;
             margin-right: 0.75rem;
             flex-shrink: 0;
-        }
-        .step-content {
-            display: flex;
-            align-items: flex-start;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .step-text {
             flex-grow: 1;
         }
         .knowledge-points {
             margin-top: 0.5rem;
-            padding-left: 0.5rem;
+            padding-left: 0.75rem;
             border-left: 2px dashed #a0aec0; /* Dashed gray border for knowledge points */
             font-size: 0.9rem;
             color: #4a5568;
+        }
+        .round-title {
+            display: flex;
+            align-items: center;
+            font-medium text-lg;
+            color: #2d3748; /* Darker text for round titles */
+        }
+        .round-title svg {
+            margin-right: 0.5rem;
+            color: #007bff; /* Icon color */
         }
     </style>
 </head>
 <body class="antialiased">
     <div class="container">
-        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">数据岗位面试流程图总结</h1>
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Data Job Interview Flowchart Summary</h1>
 
         <!-- Amazon Section -->
         <div class="company-section">
             <div class="accordion-header" onclick="toggleAccordion('amazon-content')">
-                <h2 class="text-2xl font-bold text-gray-700">Amazon (亚马逊)</h2>
+                <h2 class="text-2xl font-bold text-gray-700">Amazon</h2>
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="amazon-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="amazon-content">
                 <!-- Data Scientist (DS) / Applied Scientist (AS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL 编码**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：聚合、过滤、窗口函数 (row_number(), lag(), lead())、CTE (Common Table Expressions)。</p>
-                                    <p>特点：难度 Easy 到 Medium，常要求优化 SQL 性能。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL Coding
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Aggregation, Filtering, Window Functions (row_number(), lag(), lead()), CTE (Common Table Expressions).</p>
+                                <p>Note: Easy to Medium difficulty, often requires SQL performance optimization.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python/编程**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：Pandas 数据处理、数据聚合和操作，可能涉及算法题 (Two Pointers, Sliding Window, BFS)。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python/Programming
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Pandas data processing, data aggregation and manipulation, may involve algorithm questions (Two Pointers, Sliding Window, BFS).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：ML/Stats (机器学习/统计)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础概念 (GD/SGD, Batch Size, 监督/无监督学习, 线性/逻辑回归, 损失函数, 正则化, 过拟合)、模型 (决策树, 随机森林, Boosting, 神经网络, Transformer)、因果推断 (PSM, DID, IV)、A/B Testing (设计, 指标选择, 结果分析)。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 3: ML/Stats (Machine Learning/Statistics)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic concepts (GD/SGD, Batch Size, Supervised/Unsupervised Learning, Linear/Logistic Regression, Loss Functions, Regularization, Overfitting), Models (Decision Trees, Random Forests, Boosting, Neural Networks, Transformer), Causal Inference (PSM, DID, IV), A/B Testing (Design, Metric Selection, Result Analysis).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Case Study (案例分析)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：房价估值模型、电商转化率、用户行为分析系统设计、LLM 应用设计 (如客服聊天机器人)。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 4: Case Study (Analysis)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Housing price estimation models, E-commerce conversion rate, User behavior analysis system design, LLM application design (e.g., customer service chatbot).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">5</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第五轮：Behavioral Questions (BQ) / Leadership Principles (LP)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：亚马逊 LP (Customer Obsession, Ownership, Bias for Action, Dive Deep, Invent and Simplify, Are Right, A Lot, Learn and Be Curious, Deliver Results, Have Backbone; Disagree and Commit, Earn Trust 等)，要求用 STAR 原则讲述具体故事。</p>
-                                </div>
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 5: Behavioral Questions (BQ) / Leadership Principles (LP)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Amazon LPs (Customer Obsession, Ownership, Bias for Action, Dive Deep, Invent and Simplify, Are Right, A Lot, Learn and Be Curious, Deliver Results, Have Backbone; Disagree and Commit, Earn Trust, etc.), ability to tell stories using STAR method.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 是重中之重，通常决定技术轮能否通过；LP 贯穿整个面试过程，需充分准备多个故事；部分岗位要求系统设计。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL is paramount and often determines technical round success; LPs are crucial throughout the interview, requiring thorough preparation of multiple stories; some roles may require system design.</p>
                 </div>
 
                 <!-- Business Intelligence Engineer (BIE) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Engineer (BIE) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Engineer (BIE) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：大量复杂 SQL (窗口函数, CTE, GROUP BY, CASE WHEN, JOIN)，常考滚动平均、留存率、Top N 问题。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Extensive complex SQL (Window Functions, CTE, GROUP BY, CASE WHEN, JOIN), frequently tested on rolling averages, retention rates, Top N problems.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Data Visualization (数据可视化)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：如何用 Tableau/QuickSight 展示 KPI、Dashboard 设计原则、图表选择、改进现有图表。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M3 3v18h18"></path><path d="M18.7 8.3L12 15l-3.3-3.3L3 18"></path></svg>
+                                Round 2: Data Visualization
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: How to present KPIs using Tableau/QuickSight, Dashboard design principles, chart selection, improving existing charts.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Business Case**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：业务场景分析，如电商网站转化率提升、用户留存率可视化。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 3: Business Case
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Business scenario analysis, such as improving e-commerce website conversion rates, visualizing user retention rates.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Leadership Principles (LP)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：同 DS/AS 岗位，LP 同样非常重要。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 4: Leadership Principles (LP)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Same as DS/AS roles, LPs are highly important.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">5</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第五轮：ETL/Database**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：ETL 流程、数据更新频率、数据库设计（星型/雪花模型）等。</p>
-                                </div>
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                                Round 5: ETL/Database
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: ETL processes, data update frequency, database design (star/snowflake schema), etc.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 难度较高，且要求优化性能；强调数据建模和可视化能力；LP 准备是关键。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL is highly difficult and requires performance optimization; strong emphasis on data modeling and visualization skills; LP preparation is key.</p>
                 </div>
 
                 <!-- Data Engineer (DE) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：复杂 SQL 查询 (递归, 窗口函数, Join)。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Complex SQL queries (recursion, window functions, Join).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python/编程**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据处理、算法题。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python/Programming
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data processing, algorithm questions.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：System Design**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：设计数据管道 (pipeline)，如物流实时流。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                                Round 3: System Design
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Designing data pipelines, such as real-time logistics streams.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：行为问题。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 4: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Behavioral questions.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 和 Python 编码是核心；系统设计能力很重要。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL and Python coding are core; system design ability is highly important.</p>
                 </div>
 
                 <!-- Data Analyst (DA) / Business Analyst (BA) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) / Business Analyst (BA) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) / Business Analyst (BA) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：简单的聚合、过滤、Join、Window Function。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Simple aggregation, filtering, Join, Window Functions.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据操作和处理。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data manipulation and processing.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Metrics**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：如何定义和使用指标来改变现有流程。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 3: Metrics
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: How to define and use metrics to change existing processes.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：行为问题。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 4: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Behavioral questions.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 难度相对较低，但要求熟练；更侧重业务理解和沟通能力。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL difficulty is relatively low but requires proficiency; more emphasis on business understanding and communication skills.</p>
                 </div>
             </div>
         </div>
@@ -339,147 +367,158 @@
         <!-- Apple Section -->
         <div class="company-section">
             <div class="accordion-header" onclick="toggleAccordion('apple-content')">
-                <h2 class="text-2xl font-bold text-gray-700">Apple (苹果)</h2>
+                <h2 class="text-2xl font-bold text-gray-700">Apple</h2>
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="apple-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="apple-content">
                 <!-- Data Scientist (DS) / ML Data Scientist (MLDS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / ML Data Scientist (MLDS) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / ML Data Scientist (MLDS) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：Python/编程**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：LeetCode 风格算法题 (Easy 到 Medium)、Pandas 数据操作、字符串处理、函数编写 (均值、中位数、众数)。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 1: Python/Programming
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: LeetCode-style algorithm questions (Easy to Medium), Pandas data manipulation, string processing, function writing (mean, median, mode).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：简单的 Join、Window Function、聚合查询。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 2: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Simple Join, Window Functions, Aggregate Queries.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：ML/Stats (机器学习/统计)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础概念 (CNN, 随机森林, 模型评估指标, A/B Testing)、模型选择、LLM (Transformer 原理, 微调)。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 3: ML/Stats (Machine Learning/Statistics)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic concepts (CNN, Random Forest, Model Evaluation Metrics, A/B Testing), Model selection, LLM (Transformer principles, fine-tuning).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Case Study (案例分析)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：评估模型、指标选择、产品评估。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 4: Case Study (Analysis)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Model evaluation, metric selection, product evaluation.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">5</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第五轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：冲突处理、优先级管理、独立性、与难缠客户沟通。</p>
-                                </div>
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 5: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Conflict resolution, prioritization, independence, communicating with difficult stakeholders.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 面试轮次较多 (可能长达 7 轮)；招聘流程可能较长，HR 反馈不及时；MLDS 岗位深入考察机器学习和 LLM。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Multiple interview rounds (up to 7); recruitment process can be lengthy, with delayed HR feedback; MLDS roles delve deeply into machine learning and LLM knowledge.</p>
                 </div>
 
                 <!-- Data Analyst (DA) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础 SQL 查询。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic SQL queries.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据处理。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data processing.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Visualization**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据可视化。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M3 3v18h18"></path><path d="M18.7 8.3L12 15l-3.3-3.3L3 18"></path></svg>
+                                Round 3: Visualization
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data visualization.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Business Sense**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：产品分析、指标设计。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 4: Business Sense
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Product analysis, metric design.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 更侧重数据分析和业务理解。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** More focused on data analysis and business understanding.</p>
                 </div>
 
                 <!-- Software/Data Engineer (DE) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Software/Data Engineer (DE) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Software/Data Engineer (DE) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：Coding**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：Python 编码 (偏向数据工程实际问题)。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 1: Coding
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Python coding (more focused on practical data engineering problems).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Competency and Technical Discussion**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：团队、角色、项目讨论。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 2: Competency and Technical Discussion
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Discussion about teams, roles, and projects.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 可能不直接考 LeetCode 算法题，更侧重实际工程能力。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** May not directly test LeetCode algorithms, more focused on practical engineering capabilities.</p>
                 </div>
             </div>
         </div>
@@ -487,130 +526,140 @@
         <!-- Google Section -->
         <div class="company-section">
             <div class="accordion-header" onclick="toggleAccordion('google-content')">
-                <h2 class="text-2xl font-bold text-gray-700">Google (谷歌)</h2>
+                <h2 class="text-2xl font-bold text-gray-700">Google</h2>
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="google-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="google-content">
                 <!-- Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：聚合、Join、窗口函数、MoM (Month-over-Month) Change、AB Test 结果分析。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Aggregation, Join, Window Functions, MoM (Month-over-Month) Change, AB Test result analysis.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python/R 编程**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据操作 (Pandas/dplyr)、算法题 (Anagram, Duplicate Removal)、模拟研究。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python/R Programming
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data manipulation (Pandas/dplyr), algorithm questions (Anagram, Duplicate Removal), simulation studies.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：ML/Stats (机器学习/统计)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础概念 (Bias-Variance Tradeoff, P-value, 置信区间, 假设检验 (Chi-square test))、模型 (线性回归, 逻辑回归, 分类器评估指标 (Precision/Recall Curve), RMSE)、因果推断。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 3: ML/Stats (Machine Learning/Statistics)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic concepts (Bias-Variance Tradeoff, P-value, Confidence Intervals, Hypothesis Testing (Chi-square test)), Models (Linear Regression, Logistic Regression, Classifier Evaluation Metrics (Precision/Recall Curve), RMSE), Causal Inference.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Case Study (案例分析)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：产品问题分析 (Google Meet/YouTube 用户下降)、AB Testing 设计 (Google Map 新功能)、用户增长策略、自动回复功能改进。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 4: Case Study (Analysis)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Product problem analysis (Google Meet/YouTube user decline), AB Testing design (Google Map new features), user growth strategies, auto-reply feature improvement.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">5</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第五轮：Data Intuition / Applied Analysis**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据分析和直觉，如如何评估海量长尾搜索数据、如何识别类似客户。</p>
-                                </div>
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 5: Data Intuition / Applied Analysis
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data analysis and intuition, such as evaluating large-scale long-tail search data, identifying similar customers.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">6</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第六轮：Googleyness and Leadership (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：决策失误、团队合作、时间管理、面对分歧。</p>
-                                </div>
+                        <span class="flow-step-number">6</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 6: Googleyness and Leadership (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Decision-making errors, teamwork, time management, handling disagreements.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 面试内容全面，涵盖 SQL、Python、ML/Stats、Case Study 和 BQ；Case Study 偏向产品，需深入思考业务逻辑；对统计学基础要求很高，有时要求手推公式。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Comprehensive interview content covering SQL, Python, ML/Stats, Case Study, and BQ; Case Study leans towards product, requiring deep understanding of business logic; high requirements for statistical fundamentals, sometimes requiring manual derivation of formulas.</p>
                 </div>
 
                 <!-- Business Data Scientist (BDS) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Data Scientist (BDS) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Data Scientist (BDS) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础 SQL 查询。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic SQL queries.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础 Python 编程。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic Python programming.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Stats + ML**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：统计和机器学习基础。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 3: Stats + ML
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Statistics and machine learning fundamentals.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Marketing/Ads**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：可能涉及营销和广告相关的问题。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 4: Marketing/Ads
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: May involve marketing and advertising-related questions.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 可能更侧重业务和营销数据分析。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** May focus more on business and marketing data analysis.</p>
                 </div>
             </div>
         </div>
@@ -624,124 +673,134 @@
             <div class="accordion-content" id="meta-content">
                 <!-- Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：高频考题 (`content_views`, `violating_content` 表格相关的查询、连续月份购买用户、广告收入 YoY (Year-over-Year) 增长率、Oculus 相关题目)。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: High-frequency questions (`content_views`, `violating_content` table queries, consecutive monthly purchasing users, ad revenue YoY growth rate, Oculus-related questions).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：奇数组成最小正数、字典中查找最频繁评论、连续两年最大班级人数、书架放书问题。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Smallest positive number from odd digits, finding most frequent comments in a dictionary, maximum class size for two consecutive years, book stacking problem.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Analytical Reasoning (AR)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：广告推荐模型评估、A/B Testing (CTR 提升、指标权衡、图表问题)、假账户识别 (贝叶斯计算)。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 3: Analytical Reasoning (AR)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Ad recommendation model evaluation, A/B Testing (CTR improvement, metric trade-offs, chart issues), fake account identification (Bayesian calculation).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Analytical Execution (AE)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：坏账户识别、贝叶斯概率计算、LLM 模型评估指标。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 4: Analytical Execution (AE)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Bad account identification, Bayesian probability calculation, LLM model evaluation metrics.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">5</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第五轮：Product Sense (PS)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：如何衡量平台有害内容严重性、Group Call 功能需求分析、新功能上线评估、指标选择与权衡 (如 Time Spent vs. Retention Rate)。</p>
-                                </div>
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 5: Product Sense (PS)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: How to measure severity of harmful content on platform, Group Call feature requirement analysis, new feature launch evaluation, metric selection and trade-offs (e.g., Time Spent vs. Retention Rate).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">6</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第六轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：项目转向、建设性反馈、说服他人、处理同事不适、AR (Are Right, A Lot)。</p>
-                                </div>
+                        <span class="flow-step-number">6</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 6: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Project redirection, constructive feedback, convincing others, handling difficult colleagues, AR (Are Right, A Lot).</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 面试流程结构化，SQL 和 Product Sense 是高频考点，且问题深入；强调 A/B Testing 的设计和分析；BQ 非常注重协作和沟通；面试官专业且效率高，但有时会比较 Intensive 和 Pushy。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Structured interview process; SQL and Product Sense are high-frequency and in-depth topics; strong emphasis on A/B Testing design and analysis; BQ heavily focuses on collaboration and communication; interviewers are professional and efficient, but can sometimes be intensive and pushy.</p>
                 </div>
 
                 <!-- Data Engineer (DE) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：书店相关题目 (销量、邀请人消费、作者统计)、连续两个月购买书籍的独立客户数量。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Bookstore-related questions (sales, invitee spending, author statistics), number of unique customers who purchased books for two consecutive months.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：奇数组成最小正数、最频繁评论、连续两年最大班级人数、书架放书问题、Doordash 外卖应用相关问题。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Smallest positive number from odd digits, most frequent comments, maximum class size for two consecutive years, book stacking problem, Doordash delivery app related questions.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Product Sense**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：如何定义指标、如何进行可视化。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 3: Product Sense
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: How to define metrics, how to perform visualization.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Data Modeling**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据表结构设计、ETL 流程。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                                Round 4: Data Modeling
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data table structure design, ETL processes.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 和 Python 编码是核心，题目通常是套题形式；Product Sense 和 Data Modeling 也会涉及。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL and Python coding are core, questions are often in set formats; Product Sense and Data Modeling are also covered.</p>
                 </div>
             </div>
         </div>
@@ -749,147 +808,158 @@
         <!-- Microsoft (微软) Section -->
         <div class="company-section">
             <div class="accordion-header" onclick="toggleAccordion('microsoft-content')">
-                <h2 class="text-2xl font-bold text-gray-700">Microsoft (微软)</h2>
+                <h2 class="text-2xl font-bold text-gray-700">Microsoft</h2>
                 <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="microsoft-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
             </div>
             <div class="accordion-content" id="microsoft-content">
                 <!-- Data Scientist (DS) / Applied Scientist (AS) -->
                 <div class="job-family-card mt-4">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：编程 (Coding)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：Python (字符串处理、数组操作、Two Pointers, Sliding Window)、SQL (聚合、Join、窗口函数)。难度 Easy 到 Medium。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 1: Coding
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Python (string manipulation, array operations, Two Pointers, Sliding Window), SQL (aggregation, Join, window functions). Difficulty Easy to Medium.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：ML/Stats (机器学习/统计)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础概念 (ML Pipeline, DL 解释, 损失函数, 计算复杂度, 回归, Attention 机制, Bias-Variance Tradeoff, 过拟合/欠拟合)、模型 (CNN vs RNN, LSTM, K-means)、A/B Testing (影响因素, 探索与利用)、概率。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M12 20v-6M6 20v-2M18 20v-4M12 14a4 4 0 1 1 0-8 4 4 0 0 1 0 8zM6 18a2 2 0 1 1 0-4 2 2 0 0 1 0 4zM18 16a2 2 0 1 1 0-4 2 2 0 0 1 0 4z"></path></svg>
+                                Round 2: ML/Stats (Machine Learning/Statistics)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic concepts (ML Pipeline, DL explanation, Loss Functions, Computational Complexity, Regression, L2 Loss, Attention Mechanism, Bias-Variance Tradeoff, Overfitting/Underfitting), Models (CNN vs RNN, LSTM, K-means), A/B Testing (influencing factors, exploration vs. exploitation), Probability.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Product Sense**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：设计 ML 模型预测 CTR、改进模型 (维度降低、特征选择、核方法、集成学习、个性化建模、数据增强)。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><line x1="10" y1="9" x2="8" y2="9"></line></svg>
+                                Round 3: Product Sense
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Designing ML models to predict CTR, improving models (dimensionality reduction, feature selection, kernel methods, ensemble learning, personalized modeling, data augmentation).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：最具挑战的项目、团队冲突、职业目标障碍、Why Microsoft。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 4: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Most challenging project, team conflicts, career goal obstacles, Why Microsoft.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 编码题量相对较少，但考察概念理解和优化；ML/Stats 考察范围广；BQ 同样重要，深入挖掘故事。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Fewer coding questions, but tests conceptual understanding and optimization; broad coverage of ML/Stats; BQ is also important, delving deep into your stories.</p>
                 </div>
 
                 <!-- Data Engineer (DE) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：聚合、Join、日期函数、定义指标。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Aggregation, Join, date functions, defining metrics.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Python**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：数据处理 (字典、函数、循环)。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                                Round 2: Python
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Data processing (dictionaries, functions, loops).</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">3</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第三轮：Data Design**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：通过项目经验考察数据设计能力。</p>
-                                </div>
+                        <span class="flow-step-number">3</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+                                Round 3: Data Design
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Assessing data design capabilities through project experience.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">4</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第四轮：System Design**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：可能涉及。</p>
-                                </div>
+                        <span class="flow-step-number">4</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6.01" y2="6"></line><line x1="6" y1="18" x2="6.01" y2="18"></line></svg>
+                                Round 4: System Design
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: May be involved.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">5</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第五轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：行为问题。</p>
-                                </div>
+                        <span class="flow-step-number">5</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 5: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Behavioral questions.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 和 Python 编码是主要部分；数据设计能力是重点。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** SQL and Python coding are primary components; data design ability is key.</p>
                 </div>
 
                 <!-- Business Intelligence Analyst (BIA) / Data Analyst (DA) -->
                 <div class="job-family-card">
-                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Analyst (BIA) / Data Analyst (DA) 面试流程</h3>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Analyst (BIA) / Data Analyst (DA) Interview Flow</h3>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">1</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第一轮：SQL**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：基础 SQL 问题。</p>
-                                </div>
+                        <span class="flow-step-number">1</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"></rect><path d="M12 2v5"></path><path d="M7 2v5"></path><path d="M17 2v5"></path><path d="M2 12h20"></path></svg>
+                                Round 1: SQL
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Basic SQL questions.</p>
                             </div>
                         </div>
                     </div>
                     <div class="flow-step">
-                        <div class="step-content">
-                            <span class="flow-step-number">2</span>
-                            <div class="step-text">
-                                <p class="font-medium text-lg">**第二轮：Behavioral Questions (BQ)**</p>
-                                <div class="knowledge-points">
-                                    <p>掌握：行为问题。</p>
-                                </div>
+                        <span class="flow-step-number">2</span>
+                        <div class="step-text">
+                            <p class="round-title">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="inline-block mr-2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+                                Round 2: Behavioral Questions (BQ)
+                            </p>
+                            <div class="knowledge-points">
+                                <p>Skills: Behavioral questions.</p>
                             </div>
                         </div>
                     </div>
-                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 主要考察基础 SQL 和行为问题。</p>
+                    <p class="text-gray-600 mt-3 mb-2">**Interview Characteristics:** Primarily assesses basic SQL and behavioral questions.</p>
                 </div>
             </div>
         </div>
