@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据岗位面试流程图总结</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .company-section {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* shadow-md */
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+        }
+        .job-family-card {
+            background-color: #f9fafb;
+            border-radius: 0.5rem; /* rounded-lg */
+            border: 1px solid #e5e7eb; /* border border-gray-200 */
+            padding: 1.25rem;
+            margin-bottom: 1rem;
+        }
+        .job-family-card:last-child {
+            margin-bottom: 0;
+        }
+        .accordion-header {
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 1.25rem; /* text-xl */
+            padding: 0.75rem 0;
+        }
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .accordion-content.active {
+            max-height: 2000px; /* Increased for more content */
+            transition: max-height 0.5s ease-in;
+        }
+        .flow-step {
+            background-color: #e0f2f7; /* Light blue background for steps */
+            border-left: 4px solid #007bff; /* Blue left border */
+            border-radius: 0.5rem;
+            padding: 1rem;
+            margin-bottom: 1rem;
+            position: relative;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+        .flow-step:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 1.25rem; /* Align with border */
+            bottom: -1rem; /* Position below the current step */
+            width: 2px;
+            height: 1rem; /* Length of the connector */
+            background-color: #007bff;
+        }
+        .flow-step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            background-color: #007bff;
+            color: white;
+            border-radius: 9999px; /* Full rounded */
+            font-weight: bold;
+            margin-right: 0.75rem;
+            flex-shrink: 0;
+        }
+        .step-content {
+            display: flex;
+            align-items: flex-start;
+        }
+        .step-text {
+            flex-grow: 1;
+        }
+        .knowledge-points {
+            margin-top: 0.5rem;
+            padding-left: 0.5rem;
+            border-left: 2px dashed #a0aec0; /* Dashed gray border for knowledge points */
+            font-size: 0.9rem;
+            color: #4a5568;
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="container">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">数据岗位面试流程图总结</h1>
+
+        <!-- Amazon Section -->
+        <div class="company-section">
+            <div class="accordion-header" onclick="toggleAccordion('amazon-content')">
+                <h2 class="text-2xl font-bold text-gray-700">Amazon (亚马逊)</h2>
+                <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="amazon-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content" id="amazon-content">
+                <!-- Data Scientist (DS) / Applied Scientist (AS) -->
+                <div class="job-family-card mt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL 编码**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：聚合、过滤、窗口函数 (row_number(), lag(), lead())、CTE (Common Table Expressions)。</p>
+                                    <p>特点：难度 Easy 到 Medium，常要求优化 SQL 性能。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python/编程**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：Pandas 数据处理、数据聚合和操作，可能涉及算法题 (Two Pointers, Sliding Window, BFS)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：ML/Stats (机器学习/统计)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础概念 (GD/SGD, Batch Size, 监督/无监督学习, 线性/逻辑回归, 损失函数, 正则化, 过拟合)、模型 (决策树, 随机森林, Boosting, 神经网络, Transformer)、因果推断 (PSM, DID, IV)、A/B Testing (设计, 指标选择, 结果分析)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Case Study (案例分析)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：房价估值模型、电商转化率、用户行为分析系统设计、LLM 应用设计 (如客服聊天机器人)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">5</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第五轮：Behavioral Questions (BQ) / Leadership Principles (LP)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：亚马逊 LP (Customer Obsession, Ownership, Bias for Action, Dive Deep, Invent and Simplify, Are Right, A Lot, Learn and Be Curious, Deliver Results, Have Backbone; Disagree and Commit, Earn Trust 等)，要求用 STAR 原则讲述具体故事。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 是重中之重，通常决定技术轮能否通过；LP 贯穿整个面试过程，需充分准备多个故事；部分岗位要求系统设计。</p>
+                </div>
+
+                <!-- Business Intelligence Engineer (BIE) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Engineer (BIE) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：大量复杂 SQL (窗口函数, CTE, GROUP BY, CASE WHEN, JOIN)，常考滚动平均、留存率、Top N 问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Data Visualization (数据可视化)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：如何用 Tableau/QuickSight 展示 KPI、Dashboard 设计原则、图表选择、改进现有图表。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Business Case**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：业务场景分析，如电商网站转化率提升、用户留存率可视化。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Leadership Principles (LP)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：同 DS/AS 岗位，LP 同样非常重要。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">5</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第五轮：ETL/Database**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：ETL 流程、数据更新频率、数据库设计（星型/雪花模型）等。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 难度较高，且要求优化性能；强调数据建模和可视化能力；LP 准备是关键。</p>
+                </div>
+
+                <!-- Data Engineer (DE) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：复杂 SQL 查询 (递归, 窗口函数, Join)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python/编程**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据处理、算法题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：System Design**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：设计数据管道 (pipeline)，如物流实时流。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：行为问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 和 Python 编码是核心；系统设计能力很重要。</p>
+                </div>
+
+                <!-- Data Analyst (DA) / Business Analyst (BA) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) / Business Analyst (BA) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：简单的聚合、过滤、Join、Window Function。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据操作和处理。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Metrics**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：如何定义和使用指标来改变现有流程。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：行为问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 难度相对较低，但要求熟练；更侧重业务理解和沟通能力。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Apple Section -->
+        <div class="company-section">
+            <div class="accordion-header" onclick="toggleAccordion('apple-content')">
+                <h2 class="text-2xl font-bold text-gray-700">Apple (苹果)</h2>
+                <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="apple-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content" id="apple-content">
+                <!-- Data Scientist (DS) / ML Data Scientist (MLDS) -->
+                <div class="job-family-card mt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / ML Data Scientist (MLDS) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：Python/编程**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：LeetCode 风格算法题 (Easy 到 Medium)、Pandas 数据操作、字符串处理、函数编写 (均值、中位数、众数)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：简单的 Join、Window Function、聚合查询。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：ML/Stats (机器学习/统计)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础概念 (CNN, 随机森林, 模型评估指标, A/B Testing)、模型选择、LLM (Transformer 原理, 微调)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Case Study (案例分析)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：评估模型、指标选择、产品评估。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">5</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第五轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：冲突处理、优先级管理、独立性、与难缠客户沟通。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 面试轮次较多 (可能长达 7 轮)；招聘流程可能较长，HR 反馈不及时；MLDS 岗位深入考察机器学习和 LLM。</p>
+                </div>
+
+                <!-- Data Analyst (DA) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Analyst (DA) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础 SQL 查询。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据处理。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Visualization**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据可视化。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Business Sense**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：产品分析、指标设计。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 更侧重数据分析和业务理解。</p>
+                </div>
+
+                <!-- Software/Data Engineer (DE) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Software/Data Engineer (DE) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：Coding**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：Python 编码 (偏向数据工程实际问题)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Competency and Technical Discussion**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：团队、角色、项目讨论。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 可能不直接考 LeetCode 算法题，更侧重实际工程能力。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Google Section -->
+        <div class="company-section">
+            <div class="accordion-header" onclick="toggleAccordion('google-content')">
+                <h2 class="text-2xl font-bold text-gray-700">Google (谷歌)</h2>
+                <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="google-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content" id="google-content">
+                <!-- Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) -->
+                <div class="job-family-card mt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Product Data Scientist (PDS) / Data Scientist Research (DSR) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：聚合、Join、窗口函数、MoM (Month-over-Month) Change、AB Test 结果分析。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python/R 编程**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据操作 (Pandas/dplyr)、算法题 (Anagram, Duplicate Removal)、模拟研究。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：ML/Stats (机器学习/统计)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础概念 (Bias-Variance Tradeoff, P-value, 置信区间, 假设检验 (Chi-square test))、模型 (线性回归, 逻辑回归, 分类器评估指标 (Precision/Recall Curve), RMSE)、因果推断。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Case Study (案例分析)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：产品问题分析 (Google Meet/YouTube 用户下降)、AB Testing 设计 (Google Map 新功能)、用户增长策略、自动回复功能改进。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">5</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第五轮：Data Intuition / Applied Analysis**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据分析和直觉，如如何评估海量长尾搜索数据、如何识别类似客户。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">6</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第六轮：Googleyness and Leadership (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：决策失误、团队合作、时间管理、面对分歧。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 面试内容全面，涵盖 SQL、Python、ML/Stats、Case Study 和 BQ；Case Study 偏向产品，需深入思考业务逻辑；对统计学基础要求很高，有时要求手推公式。</p>
+                </div>
+
+                <!-- Business Data Scientist (BDS) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Data Scientist (BDS) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础 SQL 查询。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础 Python 编程。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Stats + ML**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：统计和机器学习基础。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Marketing/Ads**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：可能涉及营销和广告相关的问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 可能更侧重业务和营销数据分析。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Meta (Facebook) Section -->
+        <div class="company-section">
+            <div class="accordion-header" onclick="toggleAccordion('meta-content')">
+                <h2 class="text-2xl font-bold text-gray-700">Meta (Facebook)</h2>
+                <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="meta-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content" id="meta-content">
+                <!-- Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) -->
+                <div class="job-family-card mt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Data Science Analyst (DSA) / Product Data Analyst (PDA) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：高频考题 (`content_views`, `violating_content` 表格相关的查询、连续月份购买用户、广告收入 YoY (Year-over-Year) 增长率、Oculus 相关题目)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：奇数组成最小正数、字典中查找最频繁评论、连续两年最大班级人数、书架放书问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Analytical Reasoning (AR)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：广告推荐模型评估、A/B Testing (CTR 提升、指标权衡、图表问题)、假账户识别 (贝叶斯计算)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Analytical Execution (AE)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：坏账户识别、贝叶斯概率计算、LLM 模型评估指标。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">5</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第五轮：Product Sense (PS)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：如何衡量平台有害内容严重性、Group Call 功能需求分析、新功能上线评估、指标选择与权衡 (如 Time Spent vs. Retention Rate)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">6</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第六轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：项目转向、建设性反馈、说服他人、处理同事不适、AR (Are Right, A Lot)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 面试流程结构化，SQL 和 Product Sense 是高频考点，且问题深入；强调 A/B Testing 的设计和分析；BQ 非常注重协作和沟通；面试官专业且效率高，但有时会比较 Intensive 和 Pushy。</p>
+                </div>
+
+                <!-- Data Engineer (DE) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：书店相关题目 (销量、邀请人消费、作者统计)、连续两个月购买书籍的独立客户数量。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：奇数组成最小正数、最频繁评论、连续两年最大班级人数、书架放书问题、Doordash 外卖应用相关问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Product Sense**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：如何定义指标、如何进行可视化。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Data Modeling**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据表结构设计、ETL 流程。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 和 Python 编码是核心，题目通常是套题形式；Product Sense 和 Data Modeling 也会涉及。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Microsoft (微软) Section -->
+        <div class="company-section">
+            <div class="accordion-header" onclick="toggleAccordion('microsoft-content')">
+                <h2 class="text-2xl font-bold text-gray-700">Microsoft (微软)</h2>
+                <svg class="w-6 h-6 text-gray-600 transform transition-transform duration-300" id="microsoft-arrow" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </div>
+            <div class="accordion-content" id="microsoft-content">
+                <!-- Data Scientist (DS) / Applied Scientist (AS) -->
+                <div class="job-family-card mt-4">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Scientist (DS) / Applied Scientist (AS) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：编程 (Coding)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：Python (字符串处理、数组操作、Two Pointers, Sliding Window)、SQL (聚合、Join、窗口函数)。难度 Easy 到 Medium。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：ML/Stats (机器学习/统计)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础概念 (ML Pipeline, DL 解释, 损失函数, 计算复杂度, 回归, Attention 机制, Bias-Variance Tradeoff, 过拟合/欠拟合)、模型 (CNN vs RNN, LSTM, K-means)、A/B Testing (影响因素, 探索与利用)、概率。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Product Sense**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：设计 ML 模型预测 CTR、改进模型 (维度降低、特征选择、核方法、集成学习、个性化建模、数据增强)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：最具挑战的项目、团队冲突、职业目标障碍、Why Microsoft。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 编码题量相对较少，但考察概念理解和优化；ML/Stats 考察范围广；BQ 同样重要，深入挖掘故事。</p>
+                </div>
+
+                <!-- Data Engineer (DE) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Data Engineer (DE) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：聚合、Join、日期函数、定义指标。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Python**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：数据处理 (字典、函数、循环)。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">3</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第三轮：Data Design**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：通过项目经验考察数据设计能力。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">4</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第四轮：System Design**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：可能涉及。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">5</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第五轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：行为问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** SQL 和 Python 编码是主要部分；数据设计能力是重点。</p>
+                </div>
+
+                <!-- Business Intelligence Analyst (BIA) / Data Analyst (DA) -->
+                <div class="job-family-card">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-4">Business Intelligence Analyst (BIA) / Data Analyst (DA) 面试流程</h3>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">1</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第一轮：SQL**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：基础 SQL 问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flow-step">
+                        <div class="step-content">
+                            <span class="flow-step-number">2</span>
+                            <div class="step-text">
+                                <p class="font-medium text-lg">**第二轮：Behavioral Questions (BQ)**</p>
+                                <div class="knowledge-points">
+                                    <p>掌握：行为问题。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mt-3 mb-2">**面试特点:** 主要考察基础 SQL 和行为问题。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(id) {
+            const content = document.getElementById(id);
+            const arrow = document.getElementById(id.replace('-content', '-arrow'));
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.classList.remove('rotate-180');
+            } else {
+                content.classList.add('active');
+                arrow.classList.add('rotate-180');
+            }
+        }
+    </script>
+</body>
+</html>
