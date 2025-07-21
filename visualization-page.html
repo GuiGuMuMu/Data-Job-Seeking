@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualization Interview Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem;
+            box-sizing: border-box;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .list-item {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .example-block {
+            background-color: #f8faff;
+            border-left: 4px solid #4299e1;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .example-code {
+            background-color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #3182ce;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="content-card">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Data Visualization Interview Preparation</h1>
+
+        <div class="mb-8">
+            <h2 class="section-title">Key Knowledge Points</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Principles of Good Visualization:</strong> Clarity, Accuracy, Efficiency, Aesthetics, Storytelling. Avoid misleading visualizations.</li>
+                <li class="list-item"><strong>Chart Types and When to Use Them:</strong>
+                    <ul class="list-disc pl-5 ml-4">
+                        <li class="list-item"><strong>Bar Charts:</strong> Comparing discrete categories.</li>
+                        <li class="list-item"><strong>Line Charts:</strong> Showing trends over time.</li>
+                        <li class="list-item"><strong>Scatter Plots:</strong> Showing relationship between two continuous variables.</li>
+                        <li class="list-item"><strong>Histograms:</strong> Showing distribution of a single continuous variable.</li>
+                        <li class="list-item"><strong>Pie Charts:</strong> Showing parts of a whole (use with caution, often better replaced by bar charts).</li>
+                        <li class="list-item"><strong>Heatmaps:</strong> Displaying matrix data, correlations.</li>
+                    </ul>
+                </li>
+                <li class="list-item"><strong>Dashboard Design Principles:</strong> Layout, interactivity, key performance indicators (KPIs), audience consideration.</li>
+                <li class="list-item"><strong>Tools:</strong> Familiarity with tools like Tableau, Power BI, Looker, or programming libraries like Matplotlib, Seaborn, Plotly (Python) / ggplot2 (R).</li>
+                <li class="list-item"><strong>Data Storytelling:</strong> How to use visualizations to convey insights and drive action.</li>
+                <li class="list-item"><strong>Pre-attentive Attributes:</strong> Color, size, orientation, shape, etc., and how they guide audience attention.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Preparation Details</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Portfolio:</strong> Have a portfolio of your best visualizations or dashboards ready to discuss.</li>
+                <li class="list-item"><strong>Critique Existing Visuals:</strong> Practice identifying flaws and suggesting improvements in poorly designed charts.</li>
+                <li class="list-item"><strong>Audience Focus:</strong> Always consider who the audience is and what message you want to convey.</li>
+                <li class="list-item"><strong>Technical Skills:</strong> Be prepared to demonstrate your skills in your chosen visualization tool/library.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Examples</h2>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 1: Choosing the Right Chart</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> You want to show the trend of website traffic over the past year. Which chart type would you choose and why?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item">A <strong>line chart</strong> would be the most appropriate choice.</li>
+                    <li class="list-item"><strong>Reasoning:</strong> Line charts are excellent for displaying continuous data over time, clearly showing trends, seasonality, and specific points of interest (e.g., spikes or drops in traffic). Bar charts could also work but might be less effective at showing the continuous flow and overall trend.</li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 2: Improving a Bad Visualization</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> You are presented with a pie chart showing market share for 10 different companies, with many slices being very small. How would you improve this visualization?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Problem with Pie Chart:</strong> Pie charts are generally poor for comparing many categories, especially when slices are similar in size or very small, making it hard to discern differences.</li>
+                    <li class="list-item"><strong>Improvement:</strong> I would replace the pie chart with a <strong>horizontal bar chart</strong>.</li>
+                    <li class="list-item"><strong>Reasoning:</strong>
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item">Bar charts allow for easy comparison of lengths, making it much simpler to compare the market share of different companies.</li>
+                            <li class="list-item">I would sort the bars in descending order to quickly identify the largest and smallest market shares.</li>
+                            <li class="list-item">For the very small slices, I might group them into an "Other" category to simplify the visualization, if appropriate for the audience.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 3: Dashboard Design for Sales Performance</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> Design a dashboard to track sales performance for a retail company. What key metrics and visualizations would you include?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Key Metrics (KPIs):</strong> Total Revenue, Sales Volume (units sold), Average Order Value (AOV), Conversion Rate, Sales by Product Category, Sales by Region, Sales by Channel, Customer Lifetime Value (CLTV).</li>
+                    <li class="list-item"><strong>Visualizations:</strong>
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item"><strong>Line Chart:</strong> Revenue/Sales Volume trend over time (daily, weekly, monthly).</li>
+                            <li class="list-item"><strong>Bar Chart:</strong> Sales by product category or region (sorted descending).</li>
+                            <li class="list-item"><strong>Gauge/KPI Cards:</strong> Current Conversion Rate, AOV, with comparison to previous period/target.</li>
+                            <li class="list-item"><strong>Geographic Map (if relevant):</strong> Sales performance by state/country.</li>
+                            <li class="list-item"><strong>Funnel Chart:</strong> Sales funnel stages (e.g., visitors to purchases).</li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><strong>Interactivity:</strong> Filters for date range, product category, region, drill-down options.</li>
+                    <li class="list-item"><strong>Layout:</strong> Important KPIs prominently at the top, trends below, then breakdowns. Clean, uncluttered design.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="back-button">Go Back to Main Page</a>
+        </div>
+    </div>
+</body>
+</html>
