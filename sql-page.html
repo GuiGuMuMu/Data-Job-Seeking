@@ -1,1 +1,194 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQL Interview Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem;
+            box-sizing: border-box;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .list-item {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .example-block {
+            background-color: #f8faff;
+            border-left: 4px solid #4299e1;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .example-code {
+            background-color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #3182ce;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="content-card">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">SQL Interview Preparation</h1>
+
+        <div class="mb-8">
+            <h2 class="section-title">Key Knowledge Points</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Basic to Advanced SQL Queries:</strong> SELECT, FROM, WHERE, GROUP BY, HAVING, ORDER BY.</li>
+                <li class="list-item"><strong>Joins:</strong> INNER JOIN, LEFT JOIN, RIGHT JOIN, FULL OUTER JOIN, CROSS JOIN, Self-Join. Understand when to use each.</li>
+                <li class="list-item"><strong>Window Functions:</strong> ROW_NUMBER(), RANK(), DENSE_RANK(), NTILE(), LAG(), LEAD(), SUM() OVER(), AVG() OVER(). Essential for complex analytical queries.</li>
+                <li class="list-item"><strong>Subqueries and Common Table Expressions (CTEs):</strong> Understand their use for breaking down complex queries and improving readability.</li>
+                <li class="list-item"><strong>Aggregations:</strong> COUNT(), SUM(), AVG(), MIN(), MAX().</li>
+                <li class="list-item"><strong>Data Types and Constraints:</strong> Understanding common data types (INT, VARCHAR, DATE, BOOLEAN) and constraints (PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL).</li>
+                <li class="list-item"><strong>Indexing:</strong> Basic understanding of how indexes work and their impact on query performance.</li>
+                <li class="list-item"><strong>SQL Performance Optimization:</strong> How to identify bottlenecks and optimize slow queries (e.g., using EXPLAIN PLAN).</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Preparation Details</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Practice Platforms:</strong> Utilize platforms like LeetCode (SQL section), HackerRank, or DataLemur for daily practice. Focus on problems ranging from Easy to Medium-Hard.</li>
+                <li class="list-item"><strong>Real-world Scenarios:</strong> Think about how SQL is used in business contexts (e.g., calculating user retention, sales trends, funnel analysis).</li>
+                <li class="list-item"><strong>Explain Your Logic:</strong> Be prepared to explain your thought process and query logic step-by-step during the interview.</li>
+                <li class="list-item"><strong>Edge Cases:</strong> Consider edge cases for your queries (e.g., empty tables, NULL values, duplicate entries).</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Examples</h2>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 1: Find the Nth Highest Salary</h3>
+                <p class="text-description mb-2"><strong>Problem:</strong> Write a SQL query to find the Nth highest salary from an 'Employees' table.</p>
+                <pre class="example-code">
+-- Assume N = 2 (find the 2nd highest salary)
+SELECT DISTINCT Salary
+FROM Employees
+ORDER BY Salary DESC
+LIMIT 1 OFFSET 1;
+
+-- Using Window Function (more robust for Nth highest)
+WITH RankedSalaries AS (
+    SELECT
+        Salary,
+        DENSE_RANK() OVER (ORDER BY Salary DESC) as rnk
+    FROM
+        Employees
+)
+SELECT Salary
+FROM RankedSalaries
+WHERE rnk = 2;
+                </pre>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 2: Monthly Active Users (MAU)</h3>
+                <p class="text-description mb-2"><strong>Problem:</strong> Calculate the number of unique monthly active users for each month from a 'UserActivity' table with 'user_id' and 'activity_date'.</p>
+                <pre class="example-code">
+SELECT
+    strftime('%Y-%m', activity_date) AS activity_month,
+    COUNT(DISTINCT user_id) AS monthly_active_users
+FROM
+    UserActivity
+GROUP BY
+    activity_month
+ORDER BY
+    activity_month;
+                </pre>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 3: Cohort Retention Rate</h3>
+                <p class="text-description mb-2"><strong>Problem:</strong> Calculate the 1-month retention rate for users based on their signup month.</p>
+                <pre class="example-code">
+-- Assuming 'users' table with 'user_id', 'signup_date'
+-- and 'user_activity' table with 'user_id', 'activity_date'
+
+WITH UserSignupMonth AS (
+    SELECT
+        user_id,
+        strftime('%Y-%m', signup_date) AS cohort_month
+    FROM
+        users
+),
+MonthlyActivity AS (
+    SELECT DISTINCT
+        user_id,
+        strftime('%Y-%m', activity_date) AS activity_month
+    FROM
+        user_activity
+)
+SELECT
+    usm.cohort_month,
+    COUNT(DISTINCT usm.user_id) AS total_cohort_users,
+    COUNT(DISTINCT CASE WHEN ma.activity_month = strftime('%Y-%m', date(usm.cohort_month || '-01', '+1 month')) THEN usm.user_id END) AS retained_users_month1,
+    CAST(COUNT(DISTINCT CASE WHEN ma.activity_month = strftime('%Y-%m', date(usm.cohort_month || '-01', '+1 month')) THEN usm.user_id END) AS REAL) * 100 / COUNT(DISTINCT usm.user_id) AS retention_rate_month1
+FROM
+    UserSignupMonth usm
+LEFT JOIN
+    MonthlyActivity ma ON usm.user_id = ma.user_id
+GROUP BY
+    usm.cohort_month
+ORDER BY
+    usm.cohort_month;
+                </pre>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="back-button">Go Back to Main Page</a>
+        </div>
+    </div>
+</body>
+</html>
