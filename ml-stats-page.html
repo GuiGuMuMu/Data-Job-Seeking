@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ML/Stats Interview Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem;
+            box-sizing: border-box;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .list-item {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .example-block {
+            background-color: #f8faff;
+            border-left: 4px solid #4299e1;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .example-code {
+            background-color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #3182ce;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="content-card">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Machine Learning & Statistics Interview Preparation</h1>
+
+        <div class="mb-8">
+            <h2 class="section-title">Key Knowledge Points</h2>
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Statistics & Probability</h3>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Descriptive Statistics:</strong> Mean, Median, Mode, Variance, Standard Deviation, Quartiles, Skewness, Kurtosis.</li>
+                <li class="list-item"><strong>Probability:</strong> Conditional Probability, Bayes' Theorem, Law of Large Numbers, Central Limit Theorem.</li>
+                <li class="list-item"><strong>Probability Distributions:</strong> Normal, Binomial, Poisson. Understanding their properties and applications.</li>
+                <li class="list-item"><strong>Hypothesis Testing:</strong> Null and Alternative Hypotheses, p-value, Significance Level ($\alpha$), Type I/II Errors, Power, Confidence Intervals. Common tests: t-test, Chi-square test, ANOVA.</li>
+                <li class="list-item"><strong>Regression Analysis:</strong> Linear Regression assumptions, interpretation of coefficients, R-squared.</li>
+            </ul>
+
+            <h3 class="text-xl font-semibold text-gray-700 mt-4 mb-2">Machine Learning</h3>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>ML Fundamentals:</strong> Supervised vs. Unsupervised Learning, Bias-Variance Tradeoff, Overfitting and Underfitting, Cross-validation (K-fold, Leave-one-out).</li>
+                <li class="list-item"><strong>Regression Models:</strong> Linear Regression, Logistic Regression.</li>
+                <li class="list-item"><strong>Classification Models:</strong> SVM, Decision Trees, Random Forests, Gradient Boosting Machines (XGBoost, LightGBM). Understand their working principles, strengths, and weaknesses.</li>
+                <li class="list-item"><strong>Clustering:</strong> K-Means, Hierarchical Clustering.</li>
+                <li class="list-item"><strong>Model Evaluation Metrics:</strong>
+                    <ul class="list-disc pl-5 ml-4">
+                        <li class="list-item"><strong>Regression:</strong> RMSE, MAE, R-squared.</li>
+                        <li class="list-item"><strong>Classification:</strong> Accuracy, Precision, Recall, F1-score, ROC-AUC, Confusion Matrix.</li>
+                    </ul>
+                </li>
+                <li class="list-item"><strong>Feature Engineering:</strong> Techniques for creating new features, handling categorical variables (one-hot encoding, label encoding), scaling (standardization, normalization).</li>
+                <li class="list-item"><strong>Regularization:</strong> L1 (Lasso) and L2 (Ridge) regularization to prevent overfitting.</li>
+                <li class="list-item"><strong>Basic Deep Learning Concepts (for some roles):</strong> Neural Network architecture (layers, activation functions), Gradient Descent, Backpropagation (conceptual).</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Preparation Details</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Conceptual Understanding:</strong> Focus on understanding *why* and *when* to use certain models or statistical tests, not just memorizing formulas.</li>
+                <li class="list-item"><strong>Explain Simply:</strong> Practice explaining complex ML/Stats concepts in simple, intuitive terms.</li>
+                <li class="list-item"><strong>Assumptions:</strong> Know the assumptions behind common statistical tests and models.</li>
+                <li class="list-item"><strong>Trade-offs:</strong> Be able to discuss the trade-offs between different models and evaluation metrics.</li>
+                <li class="list-item"><strong>Case Studies:</strong> Apply your knowledge to hypothetical business problems.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Examples</h2>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 1: Explain Bias-Variance Tradeoff</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> Explain the bias-variance tradeoff in machine learning and how it relates to model complexity.</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Bias:</strong> Error from erroneous assumptions in the learning algorithm. High bias can cause an algorithm to miss the relevant relations between features and target outputs (underfitting).</li>
+                    <li class="list-item"><strong>Variance:</strong> Error from sensitivity to small fluctuations in the training set. High variance can cause an algorithm to model the random noise in the training data, rather than the intended outputs (overfitting).</li>
+                    <li class="list-item"><strong>Tradeoff:</strong> As you increase model complexity (e.g., adding more features, using more complex models like deep neural networks), bias tends to decrease, but variance tends to increase. Conversely, simpler models have higher bias but lower variance. The goal is to find a balance that generalizes well to unseen data.</li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 2: Interpreting a P-value</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> You run an A/B test and get a p-value of 0.03. What does this mean?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item">A p-value of 0.03 means that if the null hypothesis (e.g., no difference between A and B) were true, there would be a 3% chance of observing data as extreme as, or more extreme than, what you actually observed.</li>
+                    <li class="list-item">If your predetermined significance level ($\alpha$) was 0.05, then since $0.03 < 0.05$, you would reject the null hypothesis. This suggests that the observed difference is statistically significant and likely not due to random chance.</li>
+                    <li class="list-item">It does NOT mean there's a 3% chance the null hypothesis is true, nor does it tell you the magnitude or practical significance of the effect.</li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 3: Choosing a Classification Metric</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> When would you use Precision over Recall, or vice versa, for a classification model?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Precision:</strong> Focuses on minimizing False Positives. Useful when the cost of a false positive is high.
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item"><strong>Example:</strong> Spam detection (don't want to mark legitimate emails as spam), medical diagnosis (don't want to tell a healthy person they have a disease).</li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><strong>Recall (Sensitivity):</strong> Focuses on minimizing False Negatives. Useful when the cost of a false negative is high.
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item"><strong>Example:</strong> Fraud detection (don't want to miss actual fraud), disease detection (don't want to miss a sick person).</li>
+                        </ul>
+                    </li>
+                    <li class="list-item">Often, there's a tradeoff, and the F1-score (harmonic mean of precision and recall) is used to balance both.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="back-button">Go Back to Main Page</a>
+        </div>
+    </div>
+</body>
+</html>
