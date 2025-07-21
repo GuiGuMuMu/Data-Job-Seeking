@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A/B Testing Interview Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem;
+            box-sizing: border-box;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .list-item {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .example-block {
+            background-color: #f8faff;
+            border-left: 4px solid #4299e1;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .example-code {
+            background-color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #3182ce;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="content-card">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">A/B Testing Interview Preparation</h1>
+
+        <div class="mb-8">
+            <h2 class="section-title">Key Knowledge Points</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Fundamentals:</strong> Definition of A/B testing, its purpose (causality), and when to use it.</li>
+                <li class="list-item"><strong>Hypothesis Formulation:</strong> Null Hypothesis ($H_0$) and Alternative Hypothesis ($H_1$).</li>
+                <li class="list-item"><strong>Experiment Design:</strong>
+                    <ul class="list-disc pl-5 ml-4">
+                        <li class="list-item"><strong>Control vs. Treatment Groups:</strong> Randomization, ensuring groups are comparable.</li>
+                        <li class="list-item"><strong>Sample Size Calculation:</strong> Factors affecting sample size (significance level, power, minimum detectable effect, baseline conversion rate).</li>
+                        <li class="list-item"><strong>Experiment Duration:</strong> How long to run the test, considering novelty effects, seasonality, and sufficient sample size.</li>
+                        <li class="list-item"><strong>Unit of Diversion:</strong> What entity is randomized (user, session, cookie, etc.) and its implications.</li>
+                    </ul>
+                </li>
+                <li class="list-item"><strong>Metric Selection:</strong>
+                    <ul class="list-disc pl-5 ml-4">
+                        <li class="list-item"><strong>Overall Evaluation Criterion (OEC) / North Star Metric:</strong> The primary metric to optimize.</li>
+                        <li class="list-item"><strong>Guardrail Metrics:</strong> Metrics to monitor for negative side effects (e.g., latency, churn, engagement on other features).</li>
+                        <li class="list-item"><strong>Proxy Metrics:</strong> When direct measurement is difficult.</li>
+                    </ul>
+                </li>
+                <li class="list-item"><strong>Statistical Concepts:</strong>
+                    <ul class="list-disc pl-5 ml-4">
+                        <li class="list-item"><strong>Statistical Significance:</strong> p-value, confidence intervals, alpha ($\alpha$) level.</li>
+                        <li class="list-item"><strong>Power:</strong> Probability of correctly rejecting a false null hypothesis.</li>
+                        <li class="list-item"><strong>Minimum Detectable Effect (MDE):</strong> The smallest effect size you want to be able to detect.</li>
+                    </ul>
+                </li>
+                <li class="list-item"><strong>Interpretation of Results:</strong> Drawing conclusions, understanding statistical vs. practical significance.</li>
+                <li class="list-item"><strong>Common Pitfalls:</strong> Peeking, novelty effect, selection bias, SUTVA violation (Stable Unit Treatment Value Assumption), multiple comparisons problem.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Preparation Details</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Practice Design Scenarios:</strong> Be ready to design A/B tests for various product changes.</li>
+                <li class="list-item"><strong>Statistical Intuition:</strong> Develop a strong intuition for statistical concepts, not just memorizing formulas.</li>
+                <li class="list-item"><strong>Discuss Trade-offs:</strong> Be able to articulate the trade-offs involved in A/B test design and analysis.</li>
+                <li class="list-item"><strong>Explain Challenges:</strong> Discuss potential challenges and how to mitigate them.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Examples</h2>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 1: Designing an A/B Test for a New Feature</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> You want to test a new "dark mode" feature for a mobile app. How would you design an A/B test for it?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Hypothesis:</strong> Dark mode will increase user engagement and retention.</li>
+                    <li class="list-item"><strong>Control Group (A):</strong> Users see the current light mode.</li>
+                    <li class="list-item"><strong>Treatment Group (B):</strong> Users see the new dark mode.</li>
+                    <li class="list-item"><strong>Unit of Diversion:</strong> User ID (to ensure consistent experience for a user).</li>
+                    <li class="list-item"><strong>Primary Metrics (OEC):</strong> Average session duration, daily active users (DAU), weekly active users (WAU).</li>
+                    <li class="list-item"><strong>Guardrail Metrics:</strong> App crashes, load times, user complaints (qualitative), uninstalls.</li>
+                    <li class="list-item"><strong>Sample Size:</strong> Calculate based on desired statistical power (e.g., 80%), significance level (e.g., 0.05), and expected MDE for primary metrics.</li>
+                    <li class="list-item"><strong>Duration:</strong> Run for at least 1-2 full weeks to capture weekly usage patterns and mitigate novelty effects. Longer if MDE is small or traffic is low.</li>
+                    <li class="list-item"><strong>Randomization:</strong> Ensure users are randomly assigned to groups to minimize bias.</li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 2: Interpreting a Negative A/B Test Result</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> Your A/B test for a new checkout flow shows a statistically significant *decrease* in conversion rate. What would you do next?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Don't Panic:</strong> A negative result is still a result. It prevents a bad change from being rolled out.</li>
+                    <li class="list-item"><strong>Verify Data Integrity:</strong> Double-check randomization, data collection, and metric calculation for any errors.</li>
+                    <li class="list-item"><strong>Segment Analysis:</strong> Analyze the impact across different user segments (new vs. returning, device type, geography) to identify if the negative impact is localized.</li>
+                    <li class="list-item"><strong>Funnel Analysis:</strong> Break down the checkout flow into smaller steps to pinpoint where users are dropping off in the new experience.</li>
+                    <li class="list-item"><strong>Qualitative Feedback:</strong> Look at user feedback, surveys, heatmaps, or session recordings for the treatment group to understand *why* users are struggling.</li>
+                    <li class="list-item"><strong>Hypothesize & Iterate:</strong> Formulate new hypotheses based on insights, make adjustments to the feature, and run new A/B tests.</li>
+                    <li class="list-item"><strong>Rollback:</strong> If the negative impact is significant, immediately revert to the old checkout flow.</li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 3: Multiple Comparisons Problem</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> You're running an A/B test and monitoring 20 different metrics. You find one metric that is statistically significant at $\alpha = 0.05$. What's the potential issue?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item">This is the <strong>Multiple Comparisons Problem</strong>.</li>
+                    <li class="list-item"><strong>Explanation:</strong> When you perform multiple hypothesis tests (checking 20 metrics), the probability of observing at least one false positive (Type I error) increases with each additional test, even if none of the null hypotheses are truly false. For $\alpha = 0.05$, there's a 5% chance of a false positive for *each* test. With 20 tests, the family-wise error rate is much higher than 5%.</li>
+                    <li class="list-item"><strong>Mitigation:</strong>
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item"><strong>Bonferroni Correction:</strong> Adjust the alpha level ($ \alpha_{new} = \alpha / N $ where N is the number of tests). This is conservative.</li>
+                            <li class="list-item"><strong>False Discovery Rate (FDR) Control:</strong> Methods like Benjamini-Hochberg are less conservative and control the expected proportion of false positives among rejected null hypotheses.</li>
+                            <li class="list-item"><strong>Pre-define Primary Metrics:</strong> Clearly define a single or a small set of primary metrics before the experiment. Other metrics are secondary and used for deeper analysis, but the decision to launch is based on primaries.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="back-button">Go Back to Main Page</a>
+        </div>
+    </div>
+</body>
+</html>
