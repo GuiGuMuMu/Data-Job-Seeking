@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Sense Interview Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #eef2f6;
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2.5rem;
+            box-sizing: border-box;
+        }
+        .content-card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            padding: 2.5rem;
+            max-width: 900px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+        .section-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #2c5282;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+        }
+        .list-item {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+            color: #4a5568;
+            line-height: 1.6;
+        }
+        .example-block {
+            background-color: #f8faff;
+            border-left: 4px solid #4299e1;
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+        }
+        .example-code {
+            background-color: #e2e8f0;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+            font-size: 0.9rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-break: break-all;
+        }
+        .back-button {
+            display: inline-block;
+            background-color: #4299e1;
+            color: white;
+            font-weight: bold;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #3182ce;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+    <div class="content-card">
+        <h1 class="text-4xl font-extrabold text-center text-gray-800 mb-8">Product Sense Interview Preparation</h1>
+
+        <div class="mb-8">
+            <h2 class="section-title">Key Knowledge Points</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>User Funnel Analysis:</strong> Understanding user journeys (e.g., awareness -> acquisition -> activation -> retention -> revenue -> referral - AARRR metrics). Identifying drop-off points.</li>
+                <li class="list-item"><strong>Key Metrics & KPIs:</strong> Ability to define, select, and prioritize metrics for various products/features. Understanding leading vs. lagging indicators, vanity vs. actionable metrics.</li>
+                <li class="list-item"><strong>North Star Metric:</strong> Identifying the single most important metric for a product's long-term success.</li>
+                <li class="list-item"><strong>Trade-offs:</strong> Recognizing and discussing the trade-offs between different product goals or metrics (e.g., engagement vs. revenue, short-term vs. long-term).</li>
+                <li class="list-item"><strong>Experimentation (A/B Testing):</strong> Understanding how A/B tests are used to validate product hypotheses and measure impact. (Detailed A/B testing concepts are in a separate page).</li>
+                <li class="list-item"><strong>Problem Framing:</strong> Clearly defining a problem, its scope, and potential solutions.</li>
+                <li class="list-item"><strong>Root Cause Analysis:</strong> Investigating why a metric changed (e.g., drop in user engagement).</li>
+                <li class="list-item"><strong>Feature Prioritization:</strong> Methods for deciding which features to build next (e.g., RICE, ICE, MoSCoW).</li>
+                <li class="list-item"><strong>Understanding User Needs:</strong> Empathizing with users, identifying pain points, and thinking from a user-centric perspective.</li>
+                <li class="list-item"><strong>Business Acumen:</strong> Understanding the business model, competitive landscape, and strategic goals of the company.</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Preparation Details</h2>
+            <ul class="list-disc pl-5">
+                <li class="list-item"><strong>Practice Case Studies:</strong> Work through various product sense case studies (e.g., "Diagnose a drop in Instagram likes," "How would you measure success of a new feature on Google Maps?").</li>
+                <li class="list-item"><strong>Structured Thinking:</strong> Develop a framework for approaching product sense questions (e.g., clarifying, identifying goals, brainstorming metrics, exploring causes, proposing solutions).</li>
+                <li class="list-item"><strong>Read Product Blogs:</strong> Follow blogs from product leaders at major tech companies to understand current trends and thinking.</li>
+                <li class="list-item"><strong>Think Critically about Products:</strong> Analyze products you use daily. How do they make money? What are their key metrics? How could they be improved?</li>
+            </ul>
+        </div>
+
+        <div class="mb-8">
+            <h2 class="section-title">Examples</h2>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 1: Measuring Success of a New Feature</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> How would you measure the success of a new "Stories" feature on LinkedIn?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Goal:</strong> Increase engagement and content creation on LinkedIn, potentially attracting a younger demographic or new types of content.</li>
+                    <li class="list-item"><strong>North Star Metric:</strong> Potentially "Total time spent on LinkedIn" or "Number of meaningful connections made/maintained."</li>
+                    <li class="list-item"><strong>Key Metrics:</strong>
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item"><strong>Adoption:</strong> Number/percentage of active users who view/create stories.</li>
+                            <li class="list-item"><strong>Engagement:</strong> Daily/Weekly Active Story Viewers/Creators, average stories viewed per session, average stories created per user, completion rate of stories.</li>
+                            <li class="list-item"><strong>Retention:</strong> Retention of users who engage with Stories vs. those who don't.</li>
+                            <li class="list-item"><strong>Content Quality:</strong> User feedback, shares, comments on stories (qualitative).</li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><strong>Guardrail Metrics:</strong> Ensure the new feature doesn't cannibalize core product usage (e.g., time spent on feed, profile views) or negatively impact other key metrics.</li>
+                </ul>
+            </div>
+
+            <div class="example-block">
+                <h3 class="text-xl font-semibold text-gray-700 mb-2">Example 2: Diagnosing a Drop in User Engagement</h3>
+                <p class="text-description mb-2"><strong>Question:</strong> You notice a 10% drop in daily active users (DAU) for your mobile gaming app over the past week. How would you investigate this?</p>
+                <p class="text-description"><strong>Answer Points:</strong></p>
+                <ul class="list-disc pl-5">
+                    <li class="list-item"><strong>Clarify:</strong> Is it a sudden drop or a gradual decline? Is it across all users/platforms/regions?</li>
+                    <li class="list-item"><strong>Hypotheses Generation (Framework: DRIVERS):</strong>
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item"><strong>D</strong>ata issue: Tracking error, data pipeline issue.</li>
+                            <li class="list-item"><strong>R</strong>elease/Bug: New feature release, bug introduced.</li>
+                            <li class="list-item"><strong>I</strong>nternal changes: Marketing campaign ended, internal policy change.</li>
+                            <li class="list-item"><strong>V</strong>olume: Fewer new users, less marketing spend.</li>
+                            <li class="list-item"><strong>E</strong>xternal factors: Competitor launch, holiday, news event.</li>
+                            <li class="list-item"><strong>R</strong>etention: Users are churning faster.</li>
+                            <li class="list-item"><strong>S</strong>egment: Is the drop concentrated in a specific user segment (e.g., new users, specific country, device)?</li>
+                        </ul>
+                    </li>
+                    <li class="list-item"><strong>Investigation Steps:</strong>
+                        <ul class="list-disc pl-5 ml-4">
+                            <li class="list-item">Check data freshness and integrity.</li>
+                            <li class="list-item">Look at recent deployments/feature flags.</li>
+                            <li class="list-item">Segment DAU by new vs. returning users, platform, geography, acquisition channel.</li>
+                            <li class="list-item">Analyze key engagement metrics (time spent, sessions per user, key action completions) for affected segments.</li>
+                            <li class="list-item">Check external news, competitor activity, app store reviews.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center">
+            <a href="index.html" class="back-button">Go Back to Main Page</a>
+        </div>
+    </div>
+</body>
+</html>
